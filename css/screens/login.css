@@ -1,0 +1,85 @@
+.welcome-header {
+    margin: 90px 0px;
+    text-align: center;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 
+    -글씨를 가운데로 옮김
+    -flex를 주고
+    -수직으로 맞춘다. (밑으로 오게한다.)
+    -수평을 가운데로 옮겨준다. 
+    */
+}
+.welcome-header__title {
+    margin-bottom: 20px;
+    font-size: 25px;
+    /* 
+    -밑의 간격을 띄워줌다.
+    -글씨 싸이즈 변경 
+    */
+}
+.welcome-header__text {
+    width: 60%;
+    opacity: 0.5;
+    /* 
+    -넓이를 이용해 폰트 정렬
+    -글씨 투명도 변경    
+    */
+}
+#login-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 30px;
+    /* -flex를 사용한다는 의미
+    -input을 수평으로 옮김
+    - 간격 맞춰주기
+    */
+}
+#login-form input {
+    border: none;
+    padding: 15px 0px;
+    font-size: 18px;
+    margin-bottom: 25px;
+    /* 
+    -input선을 없애준다.
+    -겉의 간격을 띄워준다.
+    */
+}
+
+#login-form input:not([type="submit"]){
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    transition: border-color 0.3s ease-in-out;
+    /* 
+    -submit을 제와한 나머지를 변경
+    -선을 1px로 만들고 rgba로 선 색상 옅게 만든다.
+    -transition은 클릭시 선의 색상 변경
+    */
+}
+
+#login-form input::placeholder {
+    color: rgba(0,0,0,0.4);
+    /* 
+    -placeholder에 써져있는 글씨 색상 옅게 변경
+    */
+}
+
+#login-form input:focus {
+    border-color: var(--yellow);
+}
+
+#login-form input[type="submit"]{
+    background-color: var(--yellow);
+    cursor: pointer;
+    padding: 20px 0px;
+    border-radius: 8px;
+    /* 
+    -버튼 색상 변경해주고 사이즈 조정
+    */
+}
+#login-form a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 13px;
+}
